@@ -1,4 +1,4 @@
-# Hubot Skype Adapter
+# Hubot Skype (Skypekit) Adapter
 
 ## Description
 
@@ -7,11 +7,22 @@ to communicate with hubot through Skype.
 
 ## Installation
 
-* Add `hubot-skype` as a dependency in your hubot's `package.json`
-* Install dependencies with `npm install`
-* Install Python dependancy `Skype4py` with `pip` or `easy_install`
-* Log into a Skype client on the same machine you are running hubot
-* Run hubot with `bin/hubot -a skype`
+1. Acquire the SkypeKit SDK (as of this writing, the current version of the SDK is 4.2)
+2. Acquire the Skype Runtime application (also from the Skype Developer site)
+3. Acquire a keypair from Skype for development (also from the Skype Developer site)
+4. SkypeKit SDK 
+    * Compiling requires CMake. If you are on OS X, you can use [Homebrew](http://mxcl.github.com/homebrew/) to install it.
+    * Run `BuildWithCmake.sh` in `$SDK_DIR/interfaces/skype/cpp_embedded`
+    * Consult the [Skype SDK documentation](http://developer.skype.com/) for further details if you are having issues.
+5. Add `hubot-skypekit` as a dependency in your hubot's `package.json`
+6. Install dependencies with `npm install`
+7. Configuration
+    * Update `src/keypair.py` with the correct paths
+    * Setting up Skype username and password (this step will be improved in the future)
+        * In the `src/skype.py` file, find this line: `$skype.login(skype_username, skype_password)`
+        * Set the `skype_username` variable to the desired value
+        * Set the `skype_password` variable to the desired value
+8. Run hubot with `bin/hubot -a skypekit`
 
 ## Usage
 
