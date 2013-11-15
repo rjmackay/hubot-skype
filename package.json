@@ -1,23 +1,20 @@
 {
-  "name": "hubot-skype",
+  "name": "hubot-skypekit",
   "version": "0.0.1",
-  "author": "Dominick D'Aniello",
+  "author": "Robbie Mackay",
   "keywords": [
-    "github hubot skype adapter"
+    "github hubot skype adapter skypekit"
   ],
-  "description": "A Skype adapter for hubot",
+  "description": "A Skype adapter (using Skypekit) for hubot",
   "licenses": [
     {
       "type": "MIT",
-      "url": "http://github.com/netpro2/hubot-skype/raw/master/LICENSE"
+      "url": "http://github.com/rjmackay/hubot-skype/raw/master/LICENSE"
     }
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/netpro2k/hubot-skype.git"
-  },
-  "dependencies": {
-    "hubot": ">=2.0.5"
+    "url": "git://github.com/rjmackay/hubot-skype.git"
   },
   "devDependencies": {
     "coffee-script": "1.1.3"
